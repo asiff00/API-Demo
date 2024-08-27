@@ -1,0 +1,16 @@
+{
+  "name": "api-key-manager",
+  "version": "1.0.0",
+  "description": "API Key Manager with User Authentication",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "dependencies": {
+    "bcryptjs": "",
+    "dotenv": "",
+    "express": "",
+    "jsonwebtoken": "",
+    "mongoose": ""
+  }
+}

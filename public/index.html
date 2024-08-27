@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Key Manager</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>API Key Manager</h1>
+        
+        <div id="loginForm">
+            <h2>Login</h2>
+            <input type="text" id="loginUsername" placeholder="Username">
+            <input type="password" id="loginPassword" placeholder="Password">
+            <button onclick="login()">Login</button>
+            <p>Don't have an account? <a href="#" onclick="showSignup()">Sign up</a></p>
+        </div>
+
+        <div id="signupForm" class="hidden">
+            <h2>Sign Up</h2>
+            <input type="text" id="signupUsername" placeholder="Username">
+            <input type="password" id="signupPassword" placeholder="Password">
+            <button onclick="signup()">Sign Up</button>
+            <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+        </div>
+
+        <div id="dashboard" class="hidden">
+            <h2>Dashboard</h2>
+            <button onclick="createApiKey()">Create New API Key</button>
+            <button onclick="logout()" class="logout-btn">Logout</button>
+            <h3>Your API Keys</h3>
+            <table id="apiKeysTable">
+                <thead>
+                    <tr>
+                        <th>API Key</th>
+                        <th>Created At</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <h3>API Call Logs</h3>
+            <table id="logsTable">
+                <thead>
+                    <tr>
+                        <th>API Key</th>
+                        <th>Endpoint</th>
+                        <th>Timestamp</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
